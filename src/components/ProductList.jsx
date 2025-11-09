@@ -1,12 +1,14 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 
-const ProductList = ({ products }) => {
+const ProductList = ({ onRemove, ...props }) => {
   // TODO: Check if the product list is empty and display a message if needed
 
   return (
     <div>
-      {/* TODO: Iterate over the products array and render a ProductCard for each product */}
+      <ul>
+        {props.products.map((p, key) => <ProductCard product={p} key={key} onRemove={onRemove} />)}
+      </ul>
     </div>
   );
 };
