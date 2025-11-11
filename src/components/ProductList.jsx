@@ -7,7 +7,7 @@ const ProductList = ({ onRemove, ...props }) => {
   return (
     <div>
       <ul>
-        {props.products.map((p, key) => <ProductCard product={p} key={key} onRemove={onRemove} />)}
+        {props.products.map((p) => <ProductCard product={p} key={p.id} onRemove={onRemove} />)}
       </ul>
     </div>
   );
